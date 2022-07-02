@@ -1,10 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 
-import '@styles/style.scss'
+const App: React.FC = () => {
+  return <h1>jjjjjjj</h1>
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-  </React.StrictMode>
-)
+export default App
