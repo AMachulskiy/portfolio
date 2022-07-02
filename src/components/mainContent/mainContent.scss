@@ -1,0 +1,43 @@
+@import '../../styles/settings.scss';
+
+.main__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 128px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 1;
+}
+.main__about {
+  grid-area: 1 / 1 / 2 / 2;
+  &-greeting {
+    font-size: 18px;
+    color: $color_text-light;
+  }
+  &-title {
+    font-size: 58px;
+    color: $color_text-light;
+  }
+  &-status {
+    font-size: 28px;
+    color: $color_text-blue;
+  }
+  &-code {
+    margin-top: 256px;
+  }
+}
+.about__code-title {
+  color: $color_text-light;
+  font-size: 14px;
+  font-weight: 200;
+}
+.about__code-input {
+  font-size: 32px;
+    color: $color_text-dark;
+}
+.about__code-input span {
+  font-weight: 600;
+  color: $color_code-accent;
+}
