@@ -1,7 +1,8 @@
 import React from 'react'
+import WindowWrap from './components/windowWrap/windowWrap'
 
 const App: React.FC = () => {
-  return <h1>jjjjjjj</h1>
+  return <WindowWrap />
 }
 
 export default App
