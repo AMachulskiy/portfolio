@@ -10,7 +10,7 @@ module.exports = {
   mode,
   context: basePath,
   entry: {
-    main: './app.tsx',
+    main: './index.tsx',
   },
   output: {
     filename: '[name].[contenthash].js',
