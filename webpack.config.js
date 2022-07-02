@@ -10,7 +10,7 @@ module.exports = {
   mode,
   context: basePath,
   entry: {
-    main: './index.js',
+    main: './app.tsx',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -99,6 +99,7 @@ module.exports = {
     alias: {
       '@src': path.join(basePath, '/'),
       '@img': path.join(basePath, '/img/'),
+      '@styles': path.join(basePath, '/styles/'),
     },
   },
 }
