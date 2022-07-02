@@ -1,0 +1,17 @@
+@import './styles/common.scss';
+
+body {
+  font-family: 'Nunito';
+  height: 100vh;
+  background-color: $bg_color;
+  color: $color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  color: white;
+}
