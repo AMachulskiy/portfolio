@@ -1,0 +1,35 @@
+@import '../../styles/settings.scss';
+@import '../../fonts/stlz-font-v1.0/style.css';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $color_text-dark;
+  &__time {
+    margin-right: 8px;
+  }
+  &__date {}
+}
+.social {
+  display: flex;
+  align-items: center;
+  &__item {
+  padding: 12px 16px;
+  border-right: 1px solid $color_text-dark;
+}
+}
+.icons {
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    color: $color_text-hover;
+  }
+}
+.datetime {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+
+
