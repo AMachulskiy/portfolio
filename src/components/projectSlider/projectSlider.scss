@@ -1,0 +1,50 @@
+@import '../../styles/settings.scss';
+
+/* SLIDER */
+.slider__wrap {}
+
+.slider {}
+
+.slide {
+  display: inline-block;
+  background-color: $color_bg;
+  border: 1px solid $color_text-dark;
+  border-radius: 8px;
+  padding: 0px 16px 16px 16px;
+  width: 500px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px 16px 0px;
+  }
+  &__title {
+    color: $color_text-hover;
+  }
+  &__desc {
+    color: $color_text-dark;
+  }
+  &__content {
+    background-color: #0A0D12;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 22px 0px;
+  }
+  &__content-txt {
+    margin-left: 22px;
+  }
+
+  .slide__content-text {
+    margin-left: 22px;
+    padding-left: 22px;
+    border-left: 1px solid $color_text-dark;
+  }
+  &__button {
+    cursor: pointer;
+    font-weight: 500;
+    background-color: $color_button;
+    color: black;
+    padding-left: 22px;
+    margin-top: 16px;
+  }
+}
