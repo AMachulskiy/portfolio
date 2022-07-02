@@ -1,0 +1,43 @@
+@import '../../styles/settings.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.myname {
+  padding: $size 0px $size 0px;
+  color: $color_text-dark;
+  cursor: default;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: $size * 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: $size;
+  }
+
+  &_red {
+    background-color: $color_dot-red;
+  }
+
+  &_yellow {
+    background-color: $color_dot-yellow;
+  }
+
+  &_green {
+    background-color: $color_dot-green;
+  }
+}

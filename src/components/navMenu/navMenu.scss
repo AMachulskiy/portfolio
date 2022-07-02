@@ -1,0 +1,12 @@
+@import '../../styles/settings.scss';
+
+.nav {
+  height: 100px;
+  box-shadow: 0px 4px 4px 0px rgba(62, 62, 62, 0.2);
+  display: grid;
+  grid-template-rows: 80px;
+  grid-template-columns: repeat(3, 200px) 1fr;
+  &__btn {
+    border: 1px solid color_text-dark;
+  }
+}
