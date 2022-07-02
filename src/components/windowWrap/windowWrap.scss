@@ -9,4 +9,6 @@
   height: 100%;
   border-radius: $size;
   background-color: $color_bg;
+  display: flex;
+  flex-direction: column;
 }
