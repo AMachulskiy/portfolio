@@ -1,0 +1,13 @@
+@import '../../styles/settinds.scss';
+
+.window {
+  height: 100vh;
+  padding: 64px;
+  background-color: $color_bg-dark;
+  border: 1px solid red;
+}
+.container {
+  height: 100%;
+  border-radius: $size;
+  background-color: $color_bg;
+}
