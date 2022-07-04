@@ -6,7 +6,7 @@ import NavMenu from '../navMenu/navMenu'
 
 import './windowWrap.scss'
 
-const WindowWrap = () => {
+const WindowWrap: React.FC = () => {
   return (
     <div className='window'>
       <div className='container'>
