@@ -1,8 +1,18 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import functionHelpers from '@src/helpers/functionHelpers'
 import './footer.scss'
 
-const Footer = () => {
+functionHelpers.getFormattedDate()
+
+const Footer: React.FC = () => {
+  const datetimeData = functionHelpers.getFormattedDate()
+  const [datetime, setDatetime] = useState(datetimeData)
+  useEffect(() => {
+    setInterval(() => {
+      const data = functionHelpers.getFormattedDate()
+      setDatetime(data)
+    }, 1000)
+  }, [])
   return (
     <footer className='footer'>
       <div className='social'>
@@ -15,8 +25,8 @@ const Footer = () => {
         </a>
       </div>
       <div className='datetime'>
-        <div className='footer__time'>15:56</div>
-        <div className='footer__date'>28/06/2022</div>
+        <div className='footer__time'>{datetime.time}</div>
+        <div className='footer__date'>{datetime.date}</div>
       </div>
     </footer>
   )
