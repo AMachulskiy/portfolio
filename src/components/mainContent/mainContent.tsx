@@ -4,7 +4,7 @@ import ProjectSlider from '../projectSlider/projectSlider'
 
 import './mainContent.scss'
 
-const MainContent = () => {
+const MainContent: React.FC = () => {
   return (
     <section className='main__content'>
       <div className='main__about'>
@@ -13,7 +13,7 @@ const MainContent = () => {
         <div className='main__about-status'>Junior front-end developer</div>
         <div className='main__about-code'>
           <div className='about__code-title'>
-            portfolio{'>'} npx create-react-app portfolio
+            portfolio{'>'} <span>npx</span> create-react-app portfolio
           </div>
           <div className='about__code-input'>
             <Typewriter
