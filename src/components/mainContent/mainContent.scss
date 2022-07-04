@@ -35,12 +35,9 @@
 }
 .about__code-input {
   font-size: 32px;
-    color: $color_text-dark;
+  color: $color_text-dark;
 }
-.about__code-input span {
-  font-weight: 600;
-  color: $color_code-accent;
-}
+
 .main__app {
   grid-area: 1 / 2 / 2 / 3;
   position: relative;
@@ -51,7 +48,7 @@
     width: 600px;
     height: 500px;
     border-radius: 50%;
-    background: #1F2F40;
+    background: #1f2f40;
 
     position: absolute;
     filter: blur(70px);

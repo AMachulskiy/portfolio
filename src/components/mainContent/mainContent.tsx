@@ -1,4 +1,5 @@
 import React from 'react'
+import Typewriter from 'typewriter-effect'
 import ProjectSlider from '../projectSlider/projectSlider'
 
 import './mainContent.scss'
@@ -11,11 +12,13 @@ const MainContent = () => {
         <div className='main__about-title'>Aleksey Machulskiy</div>
         <div className='main__about-status'>Junior front-end developer</div>
         <div className='main__about-code'>
-          <div className='about__code-title'>
-            // write the code below to continue:
-          </div>
+          <div className='about__code-title'>portfolio{'>'} npm run dev</div>
           <div className='about__code-input'>
-            <span>˃</span> whois
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.pauseFor(3500).typeString('Happy hacking!').start()
+              }}
+            />
           </div>
         </div>
       </div>

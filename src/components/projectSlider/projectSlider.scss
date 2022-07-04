@@ -1,6 +1,12 @@
 @import '../../styles/settings.scss';
 
+.slider__wrap {
+  width: 500px;
+  height: 280px;
+  overflow: hidden;
+}
 .slide {
+  position: relative;
   display: inline-block;
   background-color: $color_bg;
   border: 1px solid $color_text-dark;
@@ -20,7 +26,7 @@
     color: $color_text-dark;
   }
   &__content {
-    background-color: #0A0D12;
+    background-color: #0a0d12;
     border: 1px solid black;
     border-radius: 8px;
     padding: 22px 0px;

@@ -12,7 +12,7 @@ const ProjectSlider: React.FC = () => {
             <div className='slide__desc'>4, 592 commits</div>
           </div>
           <div className='slide__content'>
-            <div className='slide__content-txt'>/**</div>
+            <div className='slide__content-txt'>{'/**'}</div>
             <div className='slide__content-text'>
               <p>* Integrated 4 different APIs</p>
               <p>* Over 200 different components</p>
@@ -29,7 +29,7 @@ const ProjectSlider: React.FC = () => {
             <div className='slide__desc'>4, 592 commits</div>
           </div>
           <div className='slide__content'>
-            <div className='slide__content-txt'>/**</div>
+            <div className='slide__content-txt'>{'/**'}</div>
             <div className='slide__content-text'>
               <p>* Integrated 4 different APIs</p>
               <p>* Over 200 different components</p>
