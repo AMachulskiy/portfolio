@@ -12,7 +12,9 @@ const MainContent = () => {
         <div className='main__about-title'>Aleksey Machulskiy</div>
         <div className='main__about-status'>Junior front-end developer</div>
         <div className='main__about-code'>
-          <div className='about__code-title'>portfolio{'>'} npm run dev</div>
+          <div className='about__code-title'>
+            portfolio{'>'} npx create-react-app portfolio
+          </div>
           <div className='about__code-input'>
             <Typewriter
               onInit={(typewriter) => {
