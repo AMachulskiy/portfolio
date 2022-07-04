@@ -2,7 +2,7 @@ import React from 'react'
 
 import './navMenu.scss'
 
-const NavMenu = () => {
+const NavMenu: React.FC = () => {
   return (
     <nav className='nav'>
       <div className='nav__btn active'>_home</div>
