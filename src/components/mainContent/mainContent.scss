@@ -37,7 +37,9 @@
   font-size: 32px;
   color: $color_text-dark;
 }
-
+.about__code-title span {
+  color: $color_text-hover;
+}
 .main__app {
   grid-area: 1 / 2 / 2 / 3;
   position: relative;
