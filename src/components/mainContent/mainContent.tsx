@@ -20,6 +20,7 @@ const MainContent = () => {
         </div>
       </div>
       <div className='main__app'>
+        <div className='main__app-blur' />
         <ProjectSlider />
       </div>
     </section>
