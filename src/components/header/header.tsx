@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect'
 
 import './header.scss'
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className='header'>
       <div className='myname'>
