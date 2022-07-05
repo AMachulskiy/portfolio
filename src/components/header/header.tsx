@@ -1,10 +1,11 @@
+import { ReactFC } from '@src/interfaces/react'
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import myName from '@src/data/myName'
 
 import './header.scss'
 
-const Header: React.FC = () => {
+const Header: ReactFC = () => {
   return (
     <header className='header'>
       <div className='myname'>

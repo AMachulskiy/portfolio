@@ -1,10 +1,11 @@
+import { ReactFC } from '@src/interfaces/react'
 import React, { useEffect, useState } from 'react'
 import functionHelpers from '@src/helpers/functionHelpers'
 import './footer.scss'
 
 functionHelpers.getFormattedDate()
 
-const Footer: React.FC = () => {
+const Footer: ReactFC = () => {
   const datetimeData = functionHelpers.getFormattedDate()
   const [datetime, setDatetime] = useState(datetimeData)
   useEffect(() => {

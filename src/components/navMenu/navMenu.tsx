@@ -1,8 +1,9 @@
+import { ReactFC } from '@src/interfaces/react'
 import React from 'react'
 
 import './navMenu.scss'
 
-const NavMenu: React.FC = () => {
+const NavMenu: ReactFC = () => {
   return (
     <nav className='nav'>
       <div className='nav__btn active'>_home</div>

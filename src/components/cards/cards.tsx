@@ -1,8 +1,9 @@
+import { ReactFC } from '@src/interfaces/react'
 import React from 'react'
 
 import './cards.scss'
 
-const Cards: React.FC = () => {
+const Cards: ReactFC = () => {
   return (
     <div className='slider__wrap'>
       <div className='slider'>
