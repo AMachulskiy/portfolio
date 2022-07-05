@@ -1,0 +1,49 @@
+@import '../../styles/settings.scss';
+
+.home {
+  grid-area: 1 / 1 / 2 / 2;
+  &__greeting {
+    font-size: 18px;
+    color: $color_text-light;
+  }
+  &__title {
+    font-size: 58px;
+    color: $color_text-light;
+  }
+  &__status {
+    font-size: 28px;
+    color: $color_text-blue;
+  }
+  &__code {
+    margin-top: 256px;
+    &-title {
+      color: $color_text-light;
+      font-size: 14px;
+      font-weight: 200;
+    }
+    &-input {
+      font-size: 32px;
+      color: $color_text-dark;
+    }
+  }
+}
+
+.about__code-title span {
+  color: $color_text-hover;
+}
+.home__app {
+  grid-area: 1 / 2 / 2 / 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-blur {
+    width: 600px;
+    height: 500px;
+    border-radius: 50%;
+    background: #1f2f40;
+
+    position: absolute;
+    filter: blur(70px);
+  }
+}
