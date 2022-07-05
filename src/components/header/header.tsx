@@ -1,7 +1,7 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
-
 import myName from '@src/data/myName'
+
 import './header.scss'
 
 const Header: React.FC = () => {
