@@ -1,9 +1,4 @@
-interface IFunctionHelpers {
-  getFormattedDate: () => {
-    time: string
-    date: string
-  }
-}
+import { IFunctionHelpers } from '@src/interfaces/IFunctionHelpers'
 
 const functionHelpers: IFunctionHelpers = {
   getFormattedDate: () => {
