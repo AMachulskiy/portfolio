@@ -40,6 +40,8 @@
     "prettier": "^2.7.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
