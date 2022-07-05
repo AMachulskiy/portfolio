@@ -1,7 +1,8 @@
 import React from 'react'
+import Content from '../Content/content'
 import Footer from '../footer/footer'
 import Header from '../header/header'
-import MainContent from '../mainContent/mainContent'
+
 import NavMenu from '../navMenu/navMenu'
 
 import './windowWrap.scss'
@@ -12,7 +13,7 @@ const WindowWrap: React.FC = () => {
       <div className='container'>
         <Header />
         <NavMenu />
-        <MainContent />
+        <Content />
         <Footer />
       </div>
     </div>
