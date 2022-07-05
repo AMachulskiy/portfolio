@@ -1,7 +1,13 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 
+import { IHeaderProps } from '@src/interfaces/IHeaderProps'
+
 import './header.scss'
+
+const myName: IHeaderProps = {
+  name: 'aleksey_machulskiy',
+}
 
 const Header: React.FC = () => {
   return (
@@ -9,7 +15,7 @@ const Header: React.FC = () => {
       <div className='myname'>
         <Typewriter
           onInit={(typewriter) => {
-            typewriter.pauseFor(1500).typeString('aleksey_machulskiy').start()
+            typewriter.pauseFor(1500).typeString(`${myName.name}`).start()
           }}
         />
       </div>
