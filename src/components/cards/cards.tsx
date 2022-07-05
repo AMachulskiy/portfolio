@@ -1,8 +1,8 @@
 import React from 'react'
 
-import './projectSlider.scss'
+import './cards.scss'
 
-const ProjectSlider: React.FC = () => {
+const Cards: React.FC = () => {
   return (
     <div className='slider__wrap'>
       <div className='slider'>
@@ -27,4 +27,4 @@ const ProjectSlider: React.FC = () => {
     </div>
   )
 }
-export default ProjectSlider
+export default Cards
