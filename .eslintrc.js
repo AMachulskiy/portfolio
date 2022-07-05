@@ -38,5 +38,8 @@ module.exports = {
         peerDependencies: false,
       },
     ],
+    'react/require-default-props': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    'react/prop-types': 'off',
   },
 }
