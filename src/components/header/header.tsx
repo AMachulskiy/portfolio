@@ -1,6 +1,7 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 
+import myName from '@src/data/myName'
 import './header.scss'
 
 const Header: React.FC = () => {
@@ -9,7 +10,7 @@ const Header: React.FC = () => {
       <div className='myname'>
         <Typewriter
           onInit={(typewriter) => {
-            typewriter.pauseFor(1500).typeString('aleksey_machulskiy').start()
+            typewriter.pauseFor(1500).typeString(`${myName.name}`).start()
           }}
         />
       </div>
