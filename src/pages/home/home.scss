@@ -1,7 +1,17 @@
 @import '../../styles/settings.scss';
 
 .home {
-  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 128px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 1;
+  &__about {
+    grid-area: 1 / 1 / 2 / 2;
+  }
   &__greeting {
     font-size: 18px;
     color: $color_text-light;
@@ -30,7 +40,6 @@
     }
   }
 }
-
 .home__app {
   grid-area: 1 / 2 / 2 / 3;
   position: relative;
