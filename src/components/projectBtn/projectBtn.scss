@@ -1,0 +1,13 @@
+@import '../../styles/settings.scss';
+
+.project__btn {
+  cursor: pointer;
+  color: $color_text-git;
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid $color_text-dark;
+  padding: $size * 2;
+  &:hover {
+    color: $color_text-hover;
+  }
+}
