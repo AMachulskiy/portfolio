@@ -6,8 +6,8 @@ import './home.scss'
 
 const Home: React.FC = () => {
   return (
-    <>
-      <div className='home'>
+    <section className='home'>
+      <div className='home__about'>
         <div className='home__greeting'>Hello! I am</div>
         <div className='home__title'>Aleksey Machulskiy</div>
         <div className='home__status'>Junior front-end developer</div>
@@ -26,9 +26,9 @@ const Home: React.FC = () => {
       </div>
       <div className='home__app'>
         <div className='home__app-blur' />
-        <Cards />
+        <Cards title='Project 1' desc='138 commits' />
       </div>
-    </>
+    </section>
   )
 }
 

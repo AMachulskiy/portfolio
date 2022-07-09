@@ -4,11 +4,7 @@ import React from 'react'
 import './content.scss'
 
 const Content: React.FC = () => {
-  return (
-    <section className='content'>
-      <Home />
-    </section>
-  )
+  return <Home />
 }
 
 export default Content

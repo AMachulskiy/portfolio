@@ -1,0 +1,24 @@
+@import '../../styles/settings.scss';
+
+.projects {
+  margin-top: 64px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100px;
+  justify-items: center;
+}
+.project__wrap {
+  max-width: 500px;
+}
+.projects__title {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 18px;
+  color: $color_text-light;
+}
+.project__desc {
+  font-size: 18px;
+  line-height: $size * 4;
+  padding: 32px 0px;
+}
