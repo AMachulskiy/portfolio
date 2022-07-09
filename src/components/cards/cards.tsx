@@ -1,16 +1,17 @@
 import { ReactFC } from '@src/interfaces/react'
 import React from 'react'
+import { ICardsProps } from '@src/interfaces/ICardsProps'
 
 import './cards.scss'
 
-const Cards: ReactFC = () => {
+const Cards: ReactFC<ICardsProps> = ({ title, desc }) => {
   return (
     <div className='slider__wrap'>
       <div className='slider'>
         <div className='slide'>
           <div className='slide__header'>
-            <div className='slide__title'>Project 1</div>
-            <div className='slide__desc'>4, 592 commits</div>
+            <div className='slide__title'>{title}</div>
+            <div className='slide__desc'>{desc}</div>
           </div>
           <div className='slide__content'>
             <div className='slide__content-txt'>{'/**'}</div>
