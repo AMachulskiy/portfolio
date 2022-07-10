@@ -13,8 +13,8 @@ const functionHelpers: IFunctionHelpers = {
     hours = hours < 10 ? `0${hours}` : hours
     minutes = minutes < 10 ? `0${minutes}` : minutes
     seconds = seconds < 10 ? `0${seconds}` : seconds
-    days = days + 1 < 10 ? `0${days}` : days
-    months = months + 1 < 10 ? `0${months}` : months
+    days = days < 10 ? `0${days}` : days
+    months = months < 10 ? `0${months}` : months
     return {
       time: `${hours}:${minutes}:${seconds}`,
       date: `${days}/${months}/${years}`,
