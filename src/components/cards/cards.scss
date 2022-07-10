@@ -1,10 +1,7 @@
 @import '../../styles/settings.scss';
 
-.slider__wrap {
-}
-.slide {
+.card {
   position: relative;
-
   display: inline-block;
   background-color: $color_bg;
   border: 1px solid $color_text-dark;
@@ -28,15 +25,14 @@
     border: 1px solid black;
     border-radius: 8px;
     padding: 22px 0px;
-  }
-  &__content-txt {
+    &-txt {
     margin-left: 22px;
   }
-
-  .slide__content-text {
-    margin-left: 22px;
-    padding-left: 22px;
-    border-left: 1px solid $color_text-dark;
+    &-text {
+      margin-left: 22px;
+      padding-left: 22px;
+      border-left: 1px solid $color_text-dark;
+    }
   }
   &__button {
     cursor: pointer;

@@ -6,25 +6,21 @@ import './cards.scss'
 
 const Cards: ReactFC<ICardsProps> = ({ title, desc }) => {
   return (
-    <div className='slider__wrap'>
-      <div className='slider'>
-        <div className='slide'>
-          <div className='slide__header'>
-            <div className='slide__title'>{title}</div>
-            <div className='slide__desc'>{desc}</div>
-          </div>
-          <div className='slide__content'>
-            <div className='slide__content-txt'>{'/**'}</div>
-            <div className='slide__content-text'>
-              <p>* Integrated 4 different APIs</p>
-              <p>* Over 200 different components</p>
-              <p>* React, Redux</p>
-              <p>* Full storybook setup</p>
-              <p>*/</p>
-            </div>
-            <div className='slide__button'>see the project</div>
-          </div>
+    <div className='card'>
+      <div className='card__header'>
+        <div className='card__title'>{title}</div>
+        <div className='card__desc'>{desc}</div>
+      </div>
+      <div className='card__content'>
+        <div className='card__content-txt'>{'/**'}</div>
+        <div className='card__content-text'>
+          <p>* Integrated 4 different APIs</p>
+          <p>* Over 200 different components</p>
+          <p>* React, Redux</p>
+          <p>* Full storybook setup</p>
+          <p>*/</p>
         </div>
+        <div className='card__button'>see the project</div>
       </div>
     </div>
   )
