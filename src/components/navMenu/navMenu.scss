@@ -1,27 +1,26 @@
 @import '../../styles/settings.scss';
 
 .nav {
-  overflow: hidden;
-  height: 64px;
-  box-shadow: 0px 4px 4px 0px rgba(62, 62, 62, 0.2);
-  display: grid;
-  grid-template-rows: 48px;
-  grid-template-columns: repeat(3, 200px) 1fr;
-  &__btn {
+  display: flex;
+  background-color: $color_bg-dark;
+  border-top: 1px solid $color_text-dark;
+  border-bottom: 1px solid $color_text-dark;
+  box-shadow: 0px 8px 4px 0px rgba(86, 76, 97, 0.2);
+    &__btn {
     cursor: default;
-    border: 1px solid $color_text-dark;
+    width: 200px;
+    height: 48px;
+    border-right: 1px solid $color_text-dark;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $color_bg-dark;
     &:hover {
       color: $color_text-hover;
     }
     &.active {
-    color: $color_text-hover;
-    background-color: $color_bg;
-    border: none;
-    border-top: 2px solid $color_dot-red;
-  }
+      color: $color_text-hover;
+      background-color: $color_bg;
+      border-top: 2px solid $color_dot-red;
+    }
   }
 }

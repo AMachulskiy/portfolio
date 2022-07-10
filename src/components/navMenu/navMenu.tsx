@@ -1,15 +1,18 @@
-import { ReactFC } from '@src/interfaces/react'
 import React from 'react'
+import { ReactFC } from '@src/interfaces/react'
+import { NavLink } from 'react-router-dom'
+import navMenu from '@src/data/navMenu'
 
 import './navMenu.scss'
 
 const NavMenu: ReactFC = () => {
   return (
     <nav className='nav'>
-      <div className='nav__btn active'>_home</div>
-      <div className='nav__btn'>_about_me</div>
-      <div className='nav__btn'>_projects</div>
-      <div className='nav__btn' />
+      {navMenu.map(({ to, title }) => (
+        <NavLink className='nav__btn' key={to} to={to}>
+          {title}
+        </NavLink>
+      ))}
     </nav>
   )
 }
