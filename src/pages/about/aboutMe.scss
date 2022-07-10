@@ -1,0 +1,11 @@
+@import '../../styles/settings.scss';
+
+.aboutme {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 1;
+}
+img {
+    width: 300px;
+  }
