@@ -18,10 +18,14 @@ const Footer: ReactFC = () => {
     <footer className='footer'>
       <div className='social'>
         <div className='social__item'>find me in:</div>
-        <a href='https://t.me/AlekseyStelz'>
+        <a href='https://t.me/AlekseyStelz' target='_blank' rel='noreferrer'>
           <i className='social__item icons ic-telegram' />
         </a>
-        <a href='https://github.com/AMachulskiy'>
+        <a
+          href='https://github.com/AMachulskiy'
+          target='_blank'
+          rel='noreferrer'
+        >
           <i className='social__item icons ic-github' />
         </a>
       </div>
