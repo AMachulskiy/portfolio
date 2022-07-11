@@ -2,10 +2,59 @@
 
 .aboutme {
   display: grid;
-  align-items: center;
-  justify-items: center;
   flex-grow: 1;
+  grid-template-columns: 400px 3fr;
 }
-img {
-    width: 300px;
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px repeat(2, 3fr);
+  grid-row-gap: 16px;
+  background-color: $color_bg-dark;
+  border: 1px solid $color_text-dark;
+  margin: -1px 0px;
+}
+.explorer {
+  color: $color_text-hover;
+  padding: $size;
+  text-transform: uppercase;
+}
+.folders {
+  padding: $size;
+  & p {
+    padding: 4px 0px 0px 8px;
   }
+  &__title {
+    text-transform: uppercase;
+    border-bottom: 1px solid $color_text-dark;
+  }
+}
+.freetime {
+  color: $color_text-free;
+  margin-left: $size * 2;
+}
+.contacts {
+  padding: $size;
+  &__title {
+    text-transform: uppercase;
+    border-bottom: 1px solid $color_text-dark;
+  }
+  &__link {
+    display: inline-block;
+    padding: 4px 0px 0px 8px;
+    &:hover {
+      color: $color_text-hover;
+    }
+  }
+}
+.about {
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  font-size: 18px;
+  &__text {
+    margin-left: $size * 1.5;
+    padding-left: $size;
+    border-left: 1px solid $color_text-dark;
+  }
+}
