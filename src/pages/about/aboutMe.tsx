@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './aboutMe.scss'
 
 const AboutMe: React.FC = () => {
+  const [open, setOpen] = useState('')
+  const isOpen = () => setOpen(open === '' ? 'open' : '')
+
   return (
     <section className='aboutme'>
       <div className='navigation'>
@@ -14,15 +17,21 @@ const AboutMe: React.FC = () => {
           <p>{'>'} Java Script</p>
           <p>{'>'} React JS</p>
           <p>{'>'} Redux Toolkit</p>
-          <p>{'>'} Free time</p>
-          <p className='freetime'>_nature walks.md</p>
-          <p className='freetime'>_roller skating.md</p>
-          <p className='freetime'>_cycling.md</p>
-          <p className='freetime'>_traveling by car.md</p>
-          <p className='freetime'>_ice skating.md</p>
-          <p className='freetime'>_snowboarding.md</p>
-          <p className='freetime'>_watching interesting movies.md</p>
-          <p className='freetime'>_listening to rock music.md</p>
+          <div className={`freetime ${open}`} onClick={isOpen}>
+            <div className='freetime__title'>
+              <span>{'>'}</span> Free time
+            </div>
+            <div className='freetime__list'>
+              <p className='freetime__item'>_nature walks.md</p>
+              <p className='freetime__item'>_roller skating.md</p>
+              <p className='freetime__item'>_cycling.md</p>
+              <p className='freetime__item'>_traveling by car.md</p>
+              <p className='freetime__item'>_ice skating.md</p>
+              <p className='freetime__item'>_snowboarding.md</p>
+              <p className='freetime__item'>_watching interesting movies.md</p>
+              <p className='freetime__item'>_listening to rock music.md</p>
+            </div>
+          </div>
         </div>
         <div className='contacts'>
           <div className='contacts__title'>{'>'} My contacts</div>
