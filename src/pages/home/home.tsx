@@ -1,8 +1,8 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
-import Cards from '@src/components/cards/cards'
 
 import './home.scss'
+import Slider from '@src/components/slider/slider'
 
 const Home: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       </div>
       <div className='home__app'>
         <div className='home__app-blur' />
-        <Cards title='Project 1' desc='138 commits' />
+        <Slider />
       </div>
     </section>
   )
