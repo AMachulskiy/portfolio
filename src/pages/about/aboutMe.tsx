@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import myContacts from '@src/data/myContacts'
 
 import './aboutMe.scss'
 
@@ -35,30 +36,17 @@ const AboutMe: React.FC = () => {
         </div>
         <div className='contacts'>
           <div className='contacts__title'>{'>'} My contacts</div>
-          <a
-            className='contacts__link'
-            href='mailto:aleksey.stelz@yandex.ru'
-            target='_blank'
-            rel='noreferrer'
-          >
-            _email: aleksey.stelz@yandex.ru
-          </a>
-          <a
-            className='contacts__link'
-            href='https://t.me/AlekseyStelz'
-            target='_blank'
-            rel='noreferrer'
-          >
-            _telegram: AlekseyStelz
-          </a>
-          <a
-            className='contacts__link'
-            href='https://github.com/AMachulskiy'
-            target='_blank'
-            rel='noreferrer'
-          >
-            _git_hub: AMachulskiy
-          </a>
+          {myContacts.map(({ link, title }) => (
+            <a
+              key={link}
+              className='contacts__link'
+              href={link}
+              target='_blank'
+              rel='noreferrer'
+            >
+              {title}
+            </a>
+          ))}
         </div>
       </div>
       <div className='about'>
