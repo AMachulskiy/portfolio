@@ -18,6 +18,7 @@
     "@babel/preset-typescript": "^7.17.12",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "@types/react-redux": "^7.1.24",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
     "babel-loader": "^8.2.5",
@@ -53,9 +54,11 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "moment": "^2.29.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "swiper": "^8.3.1"
   }
 }
