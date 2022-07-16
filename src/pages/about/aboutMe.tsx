@@ -52,7 +52,7 @@ const AboutMe: React.FC = () => {
       <div className='about'>
         <p>{'/**'}</p>
         <p className='about__text'>* About me</p>
-        <p className='about__text'>* I have 1 month of experience in web</p>
+        <p className='about__text'>* I have 2 month of experience in web</p>
         <p className='about__text'>* development</p>
         <p className='about__text'>*</p>
         <p className='about__text'>*</p>
