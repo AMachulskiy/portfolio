@@ -1,4 +1,6 @@
 export interface ICardsProps {
+  number: number
   title: string
-  desc: string
+  commits: number
+  stack?: string[]
 }
