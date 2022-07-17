@@ -4,12 +4,13 @@ import { ICardsProps } from '@src/interfaces/ICardsProps'
 
 import './cards.scss'
 
-const Cards: ReactFC<ICardsProps> = ({ title, desc }) => {
+const Cards: ReactFC<ICardsProps> = ({ number, title, commits }) => {
   return (
     <div className='card'>
       <div className='card__header'>
+        <div className='card__number'>Project {number}</div>
         <div className='card__title'>{title}</div>
-        <div className='card__desc'>{desc}</div>
+        <div className='card__commits'>{commits} commits</div>
       </div>
       <div className='card__content'>
         <div className='card__content-txt'>{'/**'}</div>
