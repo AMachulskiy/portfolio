@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
     <section className='projects'>
       <div className='projects__title'>// Top projects</div>
       {data.map(({ id, title, commits, desc, button }) => (
-        <div className='project__wrap'>
+        <div key={title} className='project__wrap'>
           <Cards number={id} title={title} commits={commits} />
           <div className='project__desc'>{desc}</div>
           <ProjectBtn>{button}</ProjectBtn>
