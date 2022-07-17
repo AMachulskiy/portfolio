@@ -1,7 +1,8 @@
-/* import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import projectsSlice from './projects/projectsSlice'
 
 const rootReducer = combineReducers({
-  accordeon: accordeonReducer,
+  projects: projectsSlice.reducer,
 })
 
 const store = configureStore({
@@ -13,4 +14,3 @@ export default store
 export type AppState = ReturnType<typeof rootReducer>
 export type AppStore = typeof store
 export type AppDispatch = AppStore['dispatch']
-*/
