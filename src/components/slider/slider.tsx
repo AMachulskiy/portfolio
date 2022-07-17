@@ -32,16 +32,16 @@ const Slider: ReactFC = () => {
         modules={[EffectFade, EffectCoverflow, Autoplay]}
       >
         <SwiperSlide>
-          <Cards title='Project 1' desc='138 commits' />
+          <Cards number={1} title='_landing page' commits={138} />
         </SwiperSlide>
         <SwiperSlide>
           <img src='../../img/xarizma-landing.jpg' alt='Project 1' />
         </SwiperSlide>
         <SwiperSlide>
-          <Cards title='Project 2' desc='255 commits' />
+          <Cards number={2} title='_portfolio' commits={245} />
         </SwiperSlide>
         <SwiperSlide>
-          <Cards title='Project 3' desc='99 commits' />
+          <Cards number={3} title='_marketplace' commits={597} />
         </SwiperSlide>
       </Swiper>
     </div>
