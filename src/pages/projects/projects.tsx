@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
     if (!haveData) {
       dispatch(getProjectsAction())
     }
-  }, [dispatch])
+  }, [])
 
   if (isLoading) return <h1>_loading...</h1>
   if (!data) return null
