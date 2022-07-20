@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '@src/hooks/redux'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Cards from '@src/components/cards/cards'
 import ProjectBtn from '@src/components/projectBtn/projectBtn'
 import getProjectsAction from '@src/store/projects/actions'
