@@ -3,7 +3,7 @@ import ProjectService from '@src/services/projectService'
 
 const projectService = new ProjectService()
 
-const getProjectsAction = createAsyncThunk('projects', (arg, thunkApi) => {
+const getProjectsAction = createAsyncThunk('projects', () => {
   return projectService.getProjects()
 })
 
