@@ -5,23 +5,12 @@ import ProjectBtn from '@src/components/projectBtn/projectBtn'
 import getProjectsAction from '@src/store/projects/actions'
 
 import './projects.scss'
-import { IProject } from '@src/interfaces/IProject'
-import Page404 from '../404/404'
 
 const Projects: React.FC = () => {
-  const [project, setProject] = useState<IProject[]>()
   const dispatch = useAppDispatch()
   const { data, isLoading, haveData } = useAppSelector(
     (state) => state.projects
   )
-
-  useEffect(() => {
-    if (data) {
-      setProject(data)
-    } else {
-      setProject(null)
-    }
-  }, [data])
 
   useEffect(() => {
     if (!haveData) {
@@ -31,7 +20,6 @@ const Projects: React.FC = () => {
 
   if (isLoading) return <h1>_loading...</h1>
   if (!data) return null
-  if (!project) return <Page404 />
 
   return (
     <section className='projects'>
