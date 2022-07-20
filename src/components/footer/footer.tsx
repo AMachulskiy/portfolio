@@ -9,12 +9,14 @@ functionHelpers.getFormattedDate()
 const Footer: ReactFC = () => {
   const datetimeData = functionHelpers.getFormattedDate()
   const [datetime, setDatetime] = useState(datetimeData)
+
   useEffect(() => {
     setInterval(() => {
       const data = functionHelpers.getFormattedDate()
       setDatetime(data)
     }, 1000)
   }, [])
+
   return (
     <footer className='footer'>
       <div className='social'>
