@@ -8,7 +8,7 @@ const myInterests: IMyInterests[] = [
   { title: 'Redux Toolkit' },
   {
     title: 'Free time',
-    item: [
+    items: [
       '_nature walks.md',
       '_roller skating.md',
       '_cycling.md',

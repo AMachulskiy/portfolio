@@ -1,4 +1,4 @@
 export interface IMyInterests {
   title: string
-  item?: string[]
+  items?: string[]
 }
