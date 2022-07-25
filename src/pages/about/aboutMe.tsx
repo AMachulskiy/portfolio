@@ -14,18 +14,22 @@ const AboutMe: React.FC = () => {
         <div className='explorer'>explorer</div>
         <div className='folders'>
           <div className='folders__title'>{'>'} My interests</div>
-
-          <div>{'>'} HTML</div>
-          <div>{'>'} CSS</div>
-          <div>{'>'} Java Script</div>
-          <div>{'>'} React JS</div>
-          <div>{'>'} Redux Toolkit</div>
-          <div onClick={isOpen} className={`freetime ${open}`}>
-            <div className='freetime__title'>
-              <span>{'>'}</span> Free time
-            </div>
-            <div className='freetime__list' />
-          </div>
+          {myInterests.map(({ title, items }) => (
+            <>
+              <div>
+                {'>'} {title}
+              </div>
+              <div className={`freetime ${open}`} onClick={isOpen}>
+                <div className='freetime__title'>
+                  <span>{'>'}</span> Free time
+                </div>
+                <div className='freetime__list' />
+                {items.map((item) => (
+                  <p className='freetime__list'>{item}</p>
+                ))}
+              </div>
+            </>
+          ))}
         </div>
         <div className='contacts'>
           <div className='contacts__title'>{'>'} My contacts</div>
