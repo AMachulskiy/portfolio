@@ -20,55 +20,16 @@
   text-transform: uppercase;
 }
 .folders {
-  padding: $size;
+  padding: 0px $size;
   & p {
-    padding: 4px 0px 0px 8px;
+    padding: 0px 0px 0px 32px;
+    font-size: 14px;
+    font-weight: 300;
   }
   &__title {
     text-transform: uppercase;
     border-bottom: 1px solid $color_text-dark;
   }
-}
-
-.freetime {
-  position: relative;
-  padding: 4px 0px 0px 8px;
-  color: $color_text-free;
-  z-index: 1;
-}
-.freetime:hover {
-  cursor: default;
-}
-.freetime.open .freetime__list {
-  top: 110%;
-  max-height: max-content;
-}
-.freetime.open .freetime__title span {
-  transform: rotate(90deg);
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-}
-.freetime__title {
-  position: relative;
-  z-index: 1;
-}
-.freetime__title span {
-  transition: all 0.3s ease-in-out;
-}
-.freetime__title:hover {
-  color: $color_text-hover;
-}
-.freetime__list {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  right: 0;
-  max-height: 0px;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-.freetime__item {
-  font-weight: 200;
 }
 
 .contacts {
