@@ -5,9 +5,9 @@ import myContacts from '@src/data/myContacts'
 import './aboutMe.scss'
 
 const AboutMe: React.FC = () => {
-  const renderInterests = (myInterests) => {
+  const renderInterests = (myInterest) => {
     const interestsHTML = []
-    myInterests.map((interest) => {
+    myInterest.map((interest) => {
       if (!interest.items) {
         interestsHTML.push(
           <div className='folders'>
