@@ -1,12 +1,36 @@
-import React, { useState } from 'react'
+import React from 'react'
 import myInterests from '@src/data/myInterests'
 import myContacts from '@src/data/myContacts'
 
 import './aboutMe.scss'
 
 const AboutMe: React.FC = () => {
-  const [open, setOpen] = useState('')
-  const isOpen = () => setOpen(open === '' ? 'open' : '')
+  const renderInterests = (myInterests) => {
+    const interestsHTML = []
+    myInterests.map((interest) => {
+      if (!interest.items) {
+        interestsHTML.push(
+          <div className='folders'>
+            {'>'} {interest.title}
+          </div>
+        )
+      } else {
+        const itemsHTML = []
+        interest.items.map((item) => {
+          itemsHTML.push(<p>{item}</p>)
+        })
+        interestsHTML.push(
+          <>
+            <div className='folders'>
+              {'>'} {interest.title}
+            </div>
+            {itemsHTML}
+          </>
+        )
+      }
+    })
+    return interestsHTML
+  }
 
   return (
     <section className='aboutme'>
@@ -14,22 +38,7 @@ const AboutMe: React.FC = () => {
         <div className='explorer'>explorer</div>
         <div className='folders'>
           <div className='folders__title'>{'>'} My interests</div>
-          {myInterests.map(({ title, items }) => (
-            <>
-              <div>
-                {'>'} {title}
-              </div>
-              <div className={`freetime ${open}`} onClick={isOpen}>
-                <div className='freetime__title'>
-                  <span>{'>'}</span> Free time
-                </div>
-                <div className='freetime__list' />
-                {items.map((item) => (
-                  <p className='freetime__list'>{item}</p>
-                ))}
-              </div>
-            </>
-          ))}
+          {renderInterests(myInterests)}
         </div>
         <div className='contacts'>
           <div className='contacts__title'>{'>'} My contacts</div>

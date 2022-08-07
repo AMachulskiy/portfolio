@@ -1,8 +1,8 @@
 import { IMyInterests } from '@src/interfaces/IMyInterests'
 
 const myInterests: IMyInterests[] = [
-  { title: 'HTML' },
-  { title: 'CSS' },
+  { title: 'HTML', items: ['_pug.md'] },
+  { title: 'CSS', items: ['_scss.md', '_sass.md'] },
   { title: 'Java Script' },
   { title: 'React JS' },
   { title: 'Redux Toolkit' },
