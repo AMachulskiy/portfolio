@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
     }
   }, [])
 
-  if (isLoading) return <h1>_loading...</h1>
+  if (isLoading) return <h1 className='projects__isloading'>_loading...</h1>
   if (!data) return null
 
   return (
