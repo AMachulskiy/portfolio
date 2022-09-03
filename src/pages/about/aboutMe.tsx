@@ -3,6 +3,7 @@ import myInterests from '@src/data/myInterests'
 import myContacts from '@src/data/myContacts'
 
 import './aboutMe.scss'
+import aboutMe from '@src/data/aboutMe'
 
 const AboutMe: React.FC = () => {
   const renderInterests = (myInterest) => {
@@ -32,6 +33,19 @@ const AboutMe: React.FC = () => {
     return interestsHTML
   }
 
+  const renderAboutMe = (text: string) => {
+    const html = []
+    const textArr = text.split('/')
+    textArr.map((txt, id) => {
+      html.push(
+        <div>
+          {`${id + 1} // `} {`* ${txt}`}
+        </div>
+      )
+    })
+    return html
+  }
+
   return (
     <section className='aboutme'>
       <div className='navigation'>
@@ -55,13 +69,7 @@ const AboutMe: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className='about'>
-        <p>{'/**'}</p>
-        <p className='about__text'>* About me</p>
-        <p className='about__text'>* I have 2 month of experience in web</p>
-        <p className='about__text'>* development</p>
-        <p className='about__text'>*/</p>
-      </div>
+      <div className='about'>{renderAboutMe(aboutMe)}</div>
     </section>
   )
 }

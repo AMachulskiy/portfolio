@@ -7,18 +7,23 @@
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 100px;
   justify-items: center;
-}
-.project__wrap {
-  max-width: 500px;
-}
-.projects__title {
+  &__title {
   grid-column: 1 / -1;
   justify-self: center;
   font-size: 18px;
   color: $color_text-light;
+  }
+  &__isloading {
+    flex-grow: 1;
+  }
 }
-.project__desc {
-  font-size: 18px;
-  line-height: $size * 4;
-  padding: 32px 0px;
+.project {
+  &__wrap {
+  max-width: 500px;
+  }
+  &__desc {
+    font-size: 18px;
+    line-height: $size * 4;
+    padding: 32px 0px;
+  }
 }
