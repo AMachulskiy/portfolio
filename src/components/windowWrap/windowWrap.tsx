@@ -4,6 +4,8 @@ import Home from '@src/pages/home/home'
 import Projects from '@src/pages/projects/projects'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import AboutMeExplorer from '../explorers/aboutMeExplorer/aboutMeExplorer'
+import ProjectsExplorer from '../explorers/projectsExplorer/projectsExplorer'
 import Footer from '../footer/footer'
 import Header from '../header/header'
 
@@ -19,8 +21,8 @@ const WindowWrap: React.FC = () => {
         <NavMenu />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='aboutme' element={<AboutMe />} />
-          <Route path='projects' element={<Projects />} />
+          <Route path='aboutme' element={<AboutMeExplorer />} />
+          <Route path='projects' element={<ProjectsExplorer />} />
           <Route path='*' element={<Page404 />} />
         </Routes>
         <Footer />
