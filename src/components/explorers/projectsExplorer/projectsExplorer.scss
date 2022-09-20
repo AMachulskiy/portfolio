@@ -1,0 +1,24 @@
+@import '../../../styles/settings.scss';
+
+.project-explorer {
+  display: grid;
+  grid-template-columns: 400px 1fr 25px;
+  flex-grow: 1;
+  &__sidebar {
+    background-color: $color_bg-dark;
+    border-right: 1px solid $color_text-dark;
+    border-left: 1px solid $color_text-dark;
+  }
+  &__content {
+    border-right: 1px solid $color_text-dark;
+  }
+  &__elem {
+    padding: 2px;
+    div {
+      height: $size;
+      background-color: $color_scroll-elem;
+      border-radius: 1px;
+    }
+  }
+}
+

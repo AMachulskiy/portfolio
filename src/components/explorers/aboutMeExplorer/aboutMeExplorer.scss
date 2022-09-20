@@ -1,0 +1,30 @@
+@import '../../../styles/settings.scss';
+
+.aboutme-explorer {
+  display: grid;
+  grid-template-columns: 400px 1fr 25px 1fr 25px;
+  flex-grow: 1;
+  &__sidebar {
+    padding: 16px;
+    background-color: $color_bg-dark;
+    border-right: 1px solid $color_text-dark;
+    border-left: 1px solid $color_text-dark;
+  }
+  &__text {
+    padding: 16px;
+    border-right: 1px solid $color_text-dark;
+  }
+  &__code {
+    padding: 16px;
+    border-right: 1px solid $color_text-dark;
+  }
+  &__elem {
+    padding: 2px;
+    border-right: 1px solid $color_text-dark;
+    div {
+      height: $size;
+      background-color: $color_scroll-elem;
+      border-radius: 1px;
+    }
+  }
+}
