@@ -4,11 +4,12 @@ import myContacts from '@src/data/myContacts'
 
 import './aboutMe.scss'
 import aboutMe from '@src/data/aboutMe'
+import { IMyInterests } from '@src/interfaces/IMyInterests'
 
 const AboutMe: React.FC = () => {
-  const renderInterests = (myInterest) => {
+  const renderInterests = (myInterest: IMyInterests[]) => {
     const interestsHTML = []
-    myInterest.map((interest) => {
+    myInterest.map((interest: IMyInterests) => {
       if (!interest.items) {
         interestsHTML.push(
           <div className='folders'>
@@ -36,13 +37,13 @@ const AboutMe: React.FC = () => {
   const renderAboutMe = (text: string) => {
     const html = []
     const textArr = text.split('/')
-    textArr.map((txt, id) => {
+    textArr.map((txt, id) =>
       html.push(
         <div>
           {`${id + 1} // `} {`* ${txt}`}
         </div>
       )
-    })
+    )
     return html
   }
 
