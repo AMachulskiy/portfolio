@@ -1,0 +1,88 @@
+@import '../../../styles/settings.scss';
+
+.project-card {
+  &__top {
+    display: flex;
+    gap: $size * 2;
+    margin-bottom: $size * 2;
+  }
+  &__content {
+    display: grid;
+    align-content: space-between;
+    width: 502px;
+    height: 450px;
+    border: 1px solid $color_text-dark;
+    position: relative;
+  }
+}
+
+.project {
+  &__title {
+    color: $color_text-blue;
+    font-weight: 600;
+  }
+  &__subtitle {
+  }
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.project__icons {
+  position: absolute;
+  display: flex;
+  gap: $size;
+  top: $size;
+  right: $size;
+}
+.project__icon-html,
+.project__icon-css,
+.project__icon-react,
+.project__icon-redux,
+.project__icon-ts,
+.project__icon-vue {
+  border: 1px solid $color_text-dark;
+  padding: $size - 4 $size;
+  background-color: $color_bg;
+}
+.project__icon-html {
+  color: $color_html;
+}
+.project__icon-css {
+  color: $color_css;
+}
+.project__icon-react {
+  color: $color_react;
+}
+.project__icon-redux {
+  color: $color_redux;
+}
+.project__icon-ts {
+  color: $color_ts;
+}
+.project__icon-vue {
+  color: $color_vue;
+}
+.project__description {
+  margin: $size * 2 0 $size * 2 $size * 2;
+  font-size: 14px;
+}
+.project__btn {
+  cursor: pointer;
+  width: 200px;
+  height: 36px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 0 $size * 2 $size * 2 $size * 2;
+  background-color: $color_bg;
+  border: 1px solid $color_text-dark;
+  color: $color_text-light;
+  &:hover {
+    color: $color_text-hover;
+    background-color: $color_bg-dark;
+  }
+}

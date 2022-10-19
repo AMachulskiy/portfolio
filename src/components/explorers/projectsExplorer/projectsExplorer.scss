@@ -11,7 +11,13 @@
     border-left: 1px solid $color_text-dark;
   }
   &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: $size;
     border-right: 1px solid $color_text-dark;
+    padding: $size * 4;
   }
   &__elem {
     padding: 2px;
