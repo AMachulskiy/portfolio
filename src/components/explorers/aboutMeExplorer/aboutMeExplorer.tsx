@@ -1,3 +1,4 @@
+import SnippetCodeCard from '@src/components/cards/snippetCodeCard/snippetCodeCard'
 import aboutMe from '@src/data/aboutMe'
 import myContacts from '@src/data/myContacts'
 import myInterests from '@src/data/myInterests'
@@ -69,33 +70,29 @@ const AboutMeExplorer: ReactFC = () => {
         </div>
       </div>
       <div className='aboutme-explorer__text'>{renderAboutMe(aboutMe)}</div>
-      <div className='aboutme-explorer__elem'>
-        <div />
-      </div>
+      <div className='aboutme-explorer__elem' />
       <div className='aboutme-explorer__code'>
         <div className='aboutme-explorer__code-title'>
           // code snippet showCase
         </div>
-        <div className='aboutme-explorer__code-snippet'>
-          <div className='aboutme-explorer__code-snippet-top'>
-            <div className='aboutme-explorer__code-snippet-name'>
-              <strong>portfolio</strong>
-              <span>functionsHelpers - time and date output</span>
-            </div>
-            <div className='aboutme-explorer__code-snippet-actions'>
-              <i className='ic-setting' /> <span>details</span>
-            </div>
-          </div>
-          <div className='aboutme-explorer__code-snippet-img'>
-            <p>
-              Hello! This is <code>functionHelpers()</code> example.
-            </p>
-          </div>
-        </div>
+        <SnippetCodeCard
+          title='portfolio'
+          subtitle='functionsHelpers - time and date output'
+          img='../../img/projects-service.svg'
+          details='Функция для определения текущего времени и даты выделена в отдельный
+            файл. На сайт выводятся отформатированные данные указав два
+            возвращаемых параметра из функции.'
+        />
+        <SnippetCodeCard
+          title='marketplace'
+          subtitle='projectService - get projects for output'
+          img='../../img/projects-service.svg'
+          details='Функция для определения текущего времени и даты выделена в отдельный
+            файл. На сайт выводятся отформатированные данные указав два
+            возвращаемых параметра из функции.'
+        />
       </div>
-      <div className='aboutme-explorer__elem'>
-        <div />
-      </div>
+      <div className='aboutme-explorer__elem' />
     </div>
   )
 }

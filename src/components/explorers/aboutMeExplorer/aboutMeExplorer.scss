@@ -39,6 +39,8 @@
     border-right: 1px solid $color_text-dark;
   }
   &__code {
+    display: grid;
+    grid-template-rows: 50px 1fr 1fr;
     padding: 16px;
     border-right: 1px solid $color_text-dark;
     &-title {
@@ -55,24 +57,38 @@
       &-name {
         display: grid;
         color: $color_text-blue;
+        strong {
+          margin-bottom: $size;
+        }
         span {
+          margin-bottom: $size;
           font-size: 14px;
           color: $color_text;
+        }
+        p {
+          margin-top: 16px;
         }
       }
       &-actions {
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
         &:hover {
           color: $color_text-light;
         }
       }
       &-img {
-        width: 100%;
-        height: 50px;
         img {
-          width: 100%;
-          height: 50%;
-          object-fit: cover;
+          object-fit: contain;
+          border: 1px solid $color_text-dark;
+        }
+      }
+      &-details {
+        font-size: 14px;
+        margin-top: $size;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        &.close {
+          opacity: 0;
         }
       }
     }
@@ -80,7 +96,12 @@
   &__elem {
     padding: 2px;
     border-right: 1px solid $color_text-dark;
-    div {
+    &::before {
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
       height: $size;
       background-color: $color_scroll-elem;
       border-radius: 1px;
