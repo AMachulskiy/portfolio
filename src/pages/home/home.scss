@@ -4,54 +4,85 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 128px;
-  grid-row-gap: 0px;
+  gap: 5vw;
   align-items: center;
   justify-items: center;
   flex-grow: 1;
-  &__about {
-    grid-area: 1 / 1 / 2 / 2;
-  }
   &__greeting {
-    font-size: 18px;
+    font-size: 20px;
     color: $color_text-light;
   }
   &__title {
-    font-size: 58px;
+    font-size: 62px;
     color: $color_text-light;
   }
   &__status {
-    font-size: 28px;
+    font-size: 32px;
     color: $color_text-blue;
   }
   &__code {
     margin-top: 256px;
     &-title {
       color: $color_text-light;
-      font-size: 14px;
       font-weight: 200;
     }
     &-title span {
       color: $color_text-hover;
     }
     &-input {
-      font-size: 32px;
+      font-size: 36px;
       color: $color_text-dark;
     }
   }
 }
 .home__app {
-  grid-area: 1 / 2 / 2 / 3;
   position: relative;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: center;
-  &-blur {
-    width: 600px;
-    height: 500px;
-    border-radius: 50%;
-    background: #1f2f40;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &-text {
     position: absolute;
-    filter: blur(70px);
+    top: 85%;
+    span {
+      color: $color_text-hover;
+    }
+  }
+}
+
+.ghost-logo {
+  width: 25vw;
+  height: 25vw;
+}
+
+.ghost-logo-fill {
+  position: absolute;
+  fill: $color_ghost-fill;
+}
+.shape-1 {
+  animation: animation 12s linear infinite;
+  width: 35%;
+  position: absolute;
+}
+.shape-2 {
+  animation: animation 14s linear infinite;
+  width: 45%;
+  position: absolute;
+}
+.shape-3 {
+  animation: animation 16s linear infinite;
+  width: 55%;
+  position: absolute;
+}
+
+@keyframes animation {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  to {
+    transform: translate(0, 0) rotate(360deg);
   }
 }
