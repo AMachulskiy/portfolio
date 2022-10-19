@@ -1,7 +1,5 @@
 import Page404 from '@src/pages/404/404'
-import AboutMe from '@src/pages/about/aboutMe'
 import Home from '@src/pages/home/home'
-import Projects from '@src/pages/projects/projects'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import AboutMeExplorer from '../explorers/aboutMeExplorer/aboutMeExplorer'
