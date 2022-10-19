@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --open",
     "build": "cross-env NODE_ENV=production webpack",
-    "server": "json-server --watch db.js --port 4000" 
+    "server": "json-server --watch db.js --port 4000"
   },
   "keywords": [],
   "author": "",
