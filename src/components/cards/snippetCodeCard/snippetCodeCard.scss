@@ -1,0 +1,48 @@
+@import '../../../styles/settings.scss';
+
+.code-snippet {
+  margin-top: $size * 4;
+  padding: 0 64px 0 64px;
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-name {
+    display: grid;
+    color: $color_text-blue;
+    strong {
+      margin-bottom: $size;
+    }
+    span {
+      margin-bottom: $size;
+      font-size: 14px;
+      color: $color_text;
+    }
+    p {
+      margin-top: 16px;
+    }
+  }
+  &-actions {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $color_text-light;
+    }
+  }
+  &-img {
+    img {
+      object-fit: contain;
+      border: 1px solid $color_text-dark;
+    }
+  }
+  &-details {
+    font-size: 14px;
+    margin-top: $size;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    &.close {
+      opacity: 0;
+    }
+  }
+}
