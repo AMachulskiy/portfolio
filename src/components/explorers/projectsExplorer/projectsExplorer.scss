@@ -5,6 +5,7 @@
   grid-template-columns: 400px 1fr 25px;
   flex-grow: 1;
   &__sidebar {
+    padding: $size * 2;
     background-color: $color_bg-dark;
     border-right: 1px solid $color_text-dark;
     border-left: 1px solid $color_text-dark;
@@ -14,7 +15,12 @@
   }
   &__elem {
     padding: 2px;
-    div {
+    &::before {
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
       height: $size;
       background-color: $color_scroll-elem;
       border-radius: 1px;
@@ -22,3 +28,37 @@
   }
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: $size;
+}
+.checkbox-elem input {
+  display: none;
+}
+.checkbox-elem input:checked + div::after {
+  display: block;
+}
+.checkbox-elem div {
+  width: $size * 3;
+  height: $size * 3;
+  border: 2px solid $color_text-dark;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.checkbox-elem div::after {
+  display: none;
+  content: '';
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  position: absolute;
+  background-color: $color_text;
+}
+.checkbox-text {
+  font-size: 18px;
+  color: $color_text;
+}

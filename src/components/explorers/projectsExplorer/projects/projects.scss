@@ -1,4 +1,4 @@
-@import '../../styles/settings.scss';
+@import '../../../../styles/settings.scss';
 
 .projects {
   margin-top: 64px;
@@ -8,10 +8,10 @@
   grid-auto-rows: 100px;
   justify-items: center;
   &__title {
-  grid-column: 1 / -1;
-  justify-self: center;
-  font-size: 18px;
-  color: $color_text-light;
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: 18px;
+    color: $color_text-light;
   }
   &__isloading {
     flex-grow: 1;
@@ -19,7 +19,7 @@
 }
 .project {
   &__wrap {
-  max-width: 500px;
+    max-width: 500px;
   }
   &__desc {
     font-size: 18px;
