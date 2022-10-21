@@ -5,7 +5,7 @@
   background-color: $color_bg-dark;
   border-top: 1px solid $color_text-dark;
   border-bottom: 1px solid $color_text-dark;
-  box-shadow: 0px 8px 4px 0px rgba(86, 76, 97, 0.2);
+  box-shadow: $shadow;
   &__btn {
     cursor: default;
     width: 200px;
@@ -14,13 +14,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: $transition;
     &:hover {
       color: $color_nav-active;
     }
     &.active {
       color: $color_nav-active;
       background-color: $color_bg;
-      border-top: 1px solid $color_nav-border-active;
+      border-top: 2px solid $color_nav-border-active;
     }
   }
 }

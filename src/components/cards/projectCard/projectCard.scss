@@ -13,6 +13,12 @@
     height: 450px;
     border: 1px solid $color_text-dark;
     position: relative;
+    transition: $transition;
+    border-radius: $size;
+    overflow: hidden;
+    &:hover {
+      box-shadow: $shadow;
+    }
   }
 }
 
@@ -47,6 +53,7 @@
   border: 1px solid $color_text-dark;
   padding: $size - 4 $size;
   background-color: $color_bg;
+  border-radius: $size;
 }
 .project__icon-html {
   color: $color_html;
@@ -81,6 +88,8 @@
   background-color: $color_bg;
   border: 1px solid $color_text-dark;
   color: $color_text-light;
+  border-radius: $size;
+  transition: $transition;
   &:hover {
     color: $color_text-hover;
     background-color: $color_bg-dark;

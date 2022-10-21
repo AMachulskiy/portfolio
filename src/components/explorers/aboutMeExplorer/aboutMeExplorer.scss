@@ -8,6 +8,7 @@
     background-color: $color_bg-dark;
     border-right: 1px solid $color_text-dark;
     border-left: 1px solid $color_text-dark;
+    margin-left: -1px;
   }
   &__sidebar-folders {
     color: $color_text-light;
@@ -29,6 +30,7 @@
     gap: $size - 4;
     padding: 16px 0 16px 16px;
     a {
+      transition: $transition;
       &:hover {
         color: $color_text-hover;
       }
@@ -96,6 +98,7 @@
   &__elem {
     padding: 2px;
     border-right: 1px solid $color_text-dark;
+    margin-right: -1px;
     &::before {
       content: '';
       display: block;
