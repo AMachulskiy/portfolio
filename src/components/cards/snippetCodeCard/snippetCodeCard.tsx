@@ -30,7 +30,7 @@ const SnippetCodeCard: ReactFC<ISnippetCodeCardProps> = ({
           <span>{subtitle}</span>
         </div>
         <div className='code-snippet-actions' onClick={() => openHideDetails()}>
-          <i className='ic-setting' /> <span>details</span>
+          <i className='ic-setting' /> <span>подробнее</span>
         </div>
       </div>
       <div className='code-snippet-img'>
