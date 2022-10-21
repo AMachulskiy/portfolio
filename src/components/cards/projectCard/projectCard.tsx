@@ -16,6 +16,31 @@ interface IProjectCardProps {
   vue?: boolean
 }
 
+interface IProjectCardPropsTest {
+  title: string
+  subtitle: string
+  img: string
+  description: string
+  tech: string[]
+}
+
+const topProjects: IProjectCardPropsTest[] = [
+  {
+    title: 'Проект 1',
+    subtitle: '// _лендинг',
+    img: '../../img/xarizma-landing.jpg',
+    description: 'Краткое описание',
+    tech: ['HTML', 'CSS'],
+  },
+  {
+    title: 'Проект 2',
+    subtitle: '// _портфолио',
+    img: '../../img/xarizma-landing.jpg',
+    description: 'Краткое описание',
+    tech: ['React', 'TypeScript'],
+  },
+]
+
 const ProjectCard: ReactFC<IProjectCardProps> = ({
   title,
   subtitle,
