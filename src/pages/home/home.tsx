@@ -7,9 +7,9 @@ const Home: React.FC = () => {
   return (
     <section className='home'>
       <div className='home__about'>
-        <div className='home__greeting'>Hello! I am</div>
-        <div className='home__title'>Aleksey Machulskiy</div>
-        <div className='home__status'>Junior front-end developer</div>
+        <div className='home__greeting'>Привет! Меня зовут</div>
+        <div className='home__title'>Алексей Мачульский</div>
+        <div className='home__status'>Фронтенд-разработчик</div>
         <div className='home__code'>
           <div className='home__code-title'>
             portfolio{'>'} <span>npx</span> create-react-app portfolio

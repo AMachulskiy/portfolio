@@ -30,6 +30,7 @@ const ProjectsExplorer: ReactFC = () => {
           subtitle='// _портфолио'
           img='../../img/portfolio.jpg'
           react
+          ts
           description='Мой сайт портфолио написанный на React JS.'
         />
         <ProjectCard

@@ -20,7 +20,7 @@ const Footer: ReactFC = () => {
   return (
     <footer className='footer'>
       <div className='social'>
-        <div className='social__item'>find me in:</div>
+        <div className='social__item'>найди меня в:</div>
         {footerLinks.map(({ link, icon }) => (
           <a key={link} href={link} target='_blank' rel='noreferrer'>
             <i className={`social__item icons ${icon}`} />

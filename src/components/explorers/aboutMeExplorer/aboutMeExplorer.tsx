@@ -50,11 +50,11 @@ const AboutMeExplorer: ReactFC = () => {
   return (
     <div className='aboutme-explorer'>
       <div className='aboutme-explorer__sidebar'>
-        <div className='aboutme-explorer__contacts-title'>my interests</div>
+        <div className='aboutme-explorer__contacts-title'>мои интересы</div>
         <div className='aboutme-explorer__interests'>
           {renderInterests(myInterests)}
         </div>
-        <div className='aboutme-explorer__contacts-title'>contacts</div>
+        <div className='aboutme-explorer__contacts-title'>контакты</div>
         <div className='aboutme-explorer__contacts'>
           {myContacts.map(({ link, title }) => (
             <a
@@ -73,10 +73,10 @@ const AboutMeExplorer: ReactFC = () => {
       <div className='aboutme-explorer__elem' />
       <div className='aboutme-explorer__code'>
         <div className='aboutme-explorer__code-title'>
-          // code snippet showCase
+          // демонстрация фрагмента кода
         </div>
         <SnippetCodeCard
-          title='portfolio'
+          title='портфолио'
           subtitle='functionsHelpers - time and date output'
           img='../../img/projects-service.svg'
           details='Функция для определения текущего времени и даты выделена в отдельный
@@ -84,7 +84,7 @@ const AboutMeExplorer: ReactFC = () => {
             возвращаемых параметра из функции.'
         />
         <SnippetCodeCard
-          title='marketplace'
+          title='маркетплейс'
           subtitle='projectService - get projects for output'
           img='../../img/projects-service.svg'
           details='Функция для определения текущего времени и даты выделена в отдельный
