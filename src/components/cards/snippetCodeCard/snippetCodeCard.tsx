@@ -1,19 +1,21 @@
 import { ReactFC } from '@src/interfaces/react'
 import React, { useState } from 'react'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 import './snippetCodeCard.scss'
 
 interface ISnippetCodeCardProps {
   title: string
   subtitle: string
-  img: string
+  code: string
   details: string
 }
 
 const SnippetCodeCard: ReactFC<ISnippetCodeCardProps> = ({
   title,
   subtitle,
-  img,
+  code,
   details,
 }) => {
   const [detailsIsOpen, setDetailsIsOpen] = useState(true)
@@ -34,7 +36,14 @@ const SnippetCodeCard: ReactFC<ISnippetCodeCardProps> = ({
         </div>
       </div>
       <div className='code-snippet-img'>
-        <img src={img} alt={title} />
+        <SyntaxHighlighter
+          language='typescript'
+          style={atomOneDarkReasonable}
+          showLineNumbers
+          wrapLongLines
+        >
+          {code}
+        </SyntaxHighlighter>
       </div>
       <div className={`code-snippet-details ${detailsIsOpen ? 'close' : ''}`}>
         {details}

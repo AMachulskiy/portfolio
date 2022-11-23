@@ -47,6 +47,19 @@ const AboutMeExplorer: ReactFC = () => {
     return html
   }
 
+  const codeFragment = `
+  import { createAsyncThunk } from '@reduxjs/toolkit'
+  import ProjectService from '@src/services/projectService'
+
+  const projectService = new ProjectService()
+
+  const getProjectsAction = createAsyncThunk('projects', () => {
+    return projectService.getProjects()
+  })
+
+  export default getProjectsAction
+  `
+
   return (
     <div className='aboutme-explorer'>
       <div className='aboutme-explorer__sidebar'>
@@ -77,16 +90,14 @@ const AboutMeExplorer: ReactFC = () => {
         </div>
         <SnippetCodeCard
           title='портфолио'
-          subtitle='functionsHelpers - time and date output'
-          img='../../img/projects-service.svg'
-          details='Функция для определения текущего времени и даты выделена в отдельный
-            файл. На сайт выводятся отформатированные данные указав два
-            возвращаемых параметра из функции.'
+          subtitle='projectService - get projects for output'
+          code={codeFragment}
+          details='projectService - сервис для вывода карточек проектов через локальный сервер и store.'
         />
         <SnippetCodeCard
           title='маркетплейс'
           subtitle='projectService - get projects for output'
-          img='../../img/projects-service.svg'
+          code='Test'
           details='Функция для определения текущего времени и даты выделена в отдельный
             файл. На сайт выводятся отформатированные данные указав два
             возвращаемых параметра из функции.'

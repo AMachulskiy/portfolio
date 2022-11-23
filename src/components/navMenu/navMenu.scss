@@ -14,7 +14,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: $transition;
     &:hover {
       color: $color_nav-active;
     }

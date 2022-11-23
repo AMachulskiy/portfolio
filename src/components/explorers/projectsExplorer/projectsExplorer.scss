@@ -15,12 +15,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
-    align-items: center;
     justify-items: center;
     gap: $size;
     border-right: 1px solid $color_text-dark;
     padding: $size * 4;
-    overflow-y: auto;
   }
   &__elem {
     padding: 2px;
@@ -37,37 +35,6 @@
   }
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: $size;
-}
-.checkbox-elem input {
-  display: none;
-}
-.checkbox-elem input:checked + div::after {
-  display: block;
-}
-.checkbox-elem div {
-  width: $size * 3;
-  height: $size * 3;
-  border: 2px solid $color_text-dark;
-  position: relative;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-.checkbox-elem div::after {
-  display: none;
-  content: '';
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  position: absolute;
-  background-color: $color_text;
-}
-.checkbox-text {
-  font-size: 18px;
-  color: $color_text;
+.projects__isloading {
+  flex-grow: 1;
 }

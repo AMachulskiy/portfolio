@@ -1,0 +1,59 @@
+@import '../../styles/settings.scss';
+
+.checkbox__wrapper {
+  display: grid;
+  gap: $size * 2;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: $size;
+  &-elem {
+    display: flex;
+    align-items: center;
+  }
+  &-elem input {
+    display: none;
+  }
+  &-elem input:checked + div::after {
+    display: block;
+  }
+  &-elem input:checked + .checkbox-text {
+    color: $color_text-light;
+  }
+  &-elem .checkbox-active {
+    width: $size * 3;
+    height: $size * 3;
+    border: 2px solid $color_text-dark;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  &-elem .checkbox-active::after {
+    display: none;
+    content: '';
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    position: absolute;
+    background-color: $color_text;
+  }
+  &-icon {
+    margin-left: $size;
+    width: 25px;
+    height: 25px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-text {
+    cursor: default;
+    margin-left: $size;
+    font-size: 18px;
+    color: $color_text;
+  }
+}

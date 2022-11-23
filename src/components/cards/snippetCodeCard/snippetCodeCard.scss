@@ -31,10 +31,8 @@
     }
   }
   &-img {
-    img {
-      object-fit: contain;
-      border: 1px solid $color_text-dark;
-    }
+    border-radius: $size - 4;
+    overflow: hidden;
   }
   &-details {
     font-size: 14px;
