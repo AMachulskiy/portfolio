@@ -25,4 +25,51 @@ $color_ghost-fill: #d93d00;
 
 $transition: all 0.3s ease-in-out;
 $shadow: 0px 8px 4px 0px rgba(86, 76, 97, 0.2);
+$shadow-cards: 0px 4px 16px 4px rgba(255, 255, 255, 0.1);
 $size: 8px;
+
+/* DEVICE Width */
+$desktop1700: 1700px;
+$desktop1500: 1500px;
+$desktop: 1200px;
+$notebook: 992px;
+$tablet: 768px;
+$mobile: 576px;
+$mobile_s: 420px;
+
+@mixin desktop1700 {
+  @media (max-width: $desktop1700) {
+    @content;
+  }
+}
+@mixin desktop1500 {
+  @media (max-width: $desktop1500) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin notebook {
+  @media (max-width: $notebook) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin mobile_s {
+  @media (max-width: $mobile_s) {
+    @content;
+  }
+}
