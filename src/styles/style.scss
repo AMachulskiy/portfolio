@@ -6,14 +6,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
 body {
   height: 100vh;
-}
-body {
   font-family: 'Fira Code', monospace;
   background-color: $color_bg-dark;
   color: $color_text;
+}
+#root {
+  height: 100%;
 }
 a {
   text-decoration: none;
