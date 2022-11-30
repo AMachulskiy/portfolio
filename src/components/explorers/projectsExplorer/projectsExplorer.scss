@@ -2,8 +2,8 @@
 
 .project-explorer {
   display: grid;
-  grid-template-columns: 400px 1fr 25px;
-  flex-grow: 1;
+  grid-template-columns: 300px 1fr 25px;
+  height: 100%;
   &__sidebar {
     padding: $size * 2;
     background-color: $color_bg-dark;
@@ -14,7 +14,7 @@
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
+
     justify-items: center;
     gap: $size;
     border-right: 1px solid $color_text-dark;
