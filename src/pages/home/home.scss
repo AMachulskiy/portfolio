@@ -3,68 +3,127 @@
 .home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
   gap: 5vw;
   align-items: center;
   justify-items: center;
-  flex-grow: 1;
+  height: 100%;
+  @include desktop1700 {
+    gap: 3vw;
+  }
+  @include notebook {
+    grid-template-columns: 1fr;
+  }
+  &__about {
+    margin-left: $size * 4;
+  }
   &__greeting {
-    font-size: 20px;
+    font-size: 1.5em;
     color: $color_text-light;
+    @include desktop1500 {
+      font-size: 1.3em;
+    }
+    @include desktop {
+      font-size: 1.1em;
+    }
   }
   &__title {
-    font-size: 62px;
+    font-size: 4em;
     color: $color_text-light;
     margin: $size * 2 0;
+    @include desktop1700 {
+      white-space: nowrap;
+    }
+    @include desktop1500 {
+      font-size: 3em;
+    }
+    @include desktop {
+      white-space: normal;
+      font-size: 2.5em;
+    }
   }
   &__status {
-    font-size: 32px;
+    font-size: 1.9em;
     color: $color_text-blue;
+    @include desktop1500 {
+      font-size: 1.5em;
+    }
+    @include desktop {
+      font-size: 1.2em;
+    }
   }
   &__code {
     margin-top: 256px;
+    @include desktop1700 {
+      margin-top: 128px;
+    }
+    @include desktop {
+      margin-top: 64px;
+    }
+    @include notebook {
+      margin-top: 128px;
+    }
     &-title {
       color: $color_text-light;
       font-weight: 200;
+      @include desktop {
+        font-size: 0.8em;
+      }
     }
     &-title span {
       color: $color_text-hover;
     }
     &-input {
-      font-size: 36px;
+      font-size: 2.5em;
       color: $color_text-dark;
+      @include desktop {
+        font-size: 1.5em;
+      }
+    }
+  }
+  &__app {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include notebook {
+      display: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      right: 20%;
+      bottom: 20%;
+      height: 70%;
+      border-radius: 50%;
+      background-color: #1f2f3f;
+      filter: blur(70px);
+      opacity: 0.7;
+    }
+    &-text {
+      position: absolute;
+      top: 85%;
+      span {
+        color: $color_text-hover;
+      }
     }
   }
 }
-.home__app {
-  position: relative;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  &-text {
-    position: absolute;
-    top: 85%;
-    span {
-      color: $color_text-hover;
-    }
-  }
-}
+
 .code-logo {
-  font-size: 10rem;
+  font-size: 10em;
   color: $color_ghost-fill;
-}
-
-.ghost-logo {
-  width: 25vw;
-  height: 25vw;
-}
-
-.ghost-logo-fill {
-  position: absolute;
-  fill: $color_ghost-fill;
+  position: relative;
+  @include desktop1500 {
+    font-size: 7em;
+  }
+  @include desktop {
+    font-size: 5em;
+  }
 }
 .shape-1 {
   animation: animation 12s linear infinite;
