@@ -2,8 +2,8 @@
 
 .aboutme-explorer {
   display: grid;
-  grid-template-columns: 400px 1fr 25px 1fr 25px;
-  flex-grow: 1;
+  grid-template-columns: 300px 1fr 25px 1fr 25px;
+  height: 100%;
   &__sidebar {
     background-color: $color_bg-dark;
     border-right: 1px solid $color_text-dark;
@@ -30,6 +30,7 @@
     gap: $size - 4;
     padding: 16px 0 16px 16px;
     a {
+      font-size: 14px;
       transition: $transition;
       &:hover {
         color: $color_text-hover;
@@ -42,7 +43,7 @@
   }
   &__code {
     display: grid;
-    grid-template-rows: 50px 1fr 1fr;
+
     padding: 16px;
     border-right: 1px solid $color_text-dark;
     &-title {

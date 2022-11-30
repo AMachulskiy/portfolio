@@ -1,5 +1,6 @@
 import SnippetCodeCard from '@src/components/cards/snippetCodeCard/snippetCodeCard'
 import aboutMe from '@src/data/aboutMe'
+import { codeFragmentOne, codeFragmentTwo } from '@src/data/codeFragments'
 import myContacts from '@src/data/myContacts'
 import myInterests from '@src/data/myInterests'
 import { IMyInterests } from '@src/interfaces/IMyInterests'
@@ -47,19 +48,6 @@ const AboutMeExplorer: ReactFC = () => {
     return html
   }
 
-  const codeFragment = `
-  import { createAsyncThunk } from '@reduxjs/toolkit'
-  import ProjectService from '@src/services/projectService'
-
-  const projectService = new ProjectService()
-
-  const getProjectsAction = createAsyncThunk('projects', () => {
-    return projectService.getProjects()
-  })
-
-  export default getProjectsAction
-  `
-
   return (
     <div className='aboutme-explorer'>
       <div className='aboutme-explorer__sidebar'>
@@ -90,17 +78,15 @@ const AboutMeExplorer: ReactFC = () => {
         </div>
         <SnippetCodeCard
           title='портфолио'
-          subtitle='projectService - get projects for output'
-          code={codeFragment}
+          subtitle='projectService - получение данных проектов для вывода'
+          code={codeFragmentOne}
           details='projectService - сервис для вывода карточек проектов через локальный сервер и store.'
         />
         <SnippetCodeCard
-          title='маркетплейс'
-          subtitle='projectService - get projects for output'
-          code='Test'
-          details='Функция для определения текущего времени и даты выделена в отдельный
-            файл. На сайт выводятся отформатированные данные указав два
-            возвращаемых параметра из функции.'
+          title='портфолио'
+          subtitle='filterHelpers - получение элементов фильтра'
+          code={codeFragmentTwo}
+          details='filterHelpers - получение элементов фильтра из свойств карточек проектов.'
         />
       </div>
       <div className='aboutme-explorer__elem' />
