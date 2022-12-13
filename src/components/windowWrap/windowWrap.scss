@@ -4,6 +4,9 @@
   height: 100%;
   padding: 32px;
   background-color: $color_bg-dark;
+  @include mobile {
+    padding: 16px;
+  }
 }
 .container {
   height: 100%;

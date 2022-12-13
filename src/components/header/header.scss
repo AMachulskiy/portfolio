@@ -11,6 +11,9 @@
   padding: $size 0px $size 0px;
   color: $color_text-dark;
   cursor: default;
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 .dots {
