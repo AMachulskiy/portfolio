@@ -6,6 +6,17 @@
   border-top: 1px solid $color_text-dark;
   border-bottom: 1px solid $color_text-dark;
   box-shadow: $shadow;
+  position: relative;
+  @include notebook {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    border-left: 1px solid $color_text-dark;
+    transform: translateX(-50%);
+    flex-direction: column;
+    perspective: 400px;
+    z-index: 11;
+  }
   &__btn {
     cursor: default;
     width: 150px;
@@ -14,6 +25,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include notebook {
+      width: 300px;
+      animation: navAnimation 600ms ease forwards;
+      transform: rotateX(90deg);
+      opacity: 0;
+      transform-origin: top;
+    }
     &:hover {
       color: $color_nav-active;
     }
@@ -22,5 +40,40 @@
       background-color: $color_bg;
       border-top: 2px solid $color_nav-border-active;
     }
+  }
+}
+
+.show__nav {
+  @include notebook {
+    display: flex;
+  }
+}
+.hide__nav {
+  @include notebook {
+    display: none;
+  }
+}
+
+.nav__btn-open {
+  display: none;
+  background-color: $color_bg-dark;
+  border-top: 1px solid $color_text-dark;
+  border-bottom: 1px solid $color_text-dark;
+  box-shadow: $shadow;
+  padding: 16px 0px;
+  text-align: center;
+  &:hover {
+    color: $color_nav-active;
+  }
+  @include notebook {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@keyframes navAnimation {
+  to {
+    transform: rotateX(0);
+    opacity: 1;
   }
 }
