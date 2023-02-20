@@ -32,6 +32,16 @@
       opacity: 0;
       transform-origin: top;
     }
+    &:nth-child(2) {
+      @include notebook {
+        animation-delay: 0.2s;
+      }
+    }
+    &:nth-child(3) {
+      @include notebook {
+        animation-delay: 0.4s;
+      }
+    }
     &:hover {
       color: $color_nav-active;
     }
