@@ -40,7 +40,7 @@ const AboutMeExplorer: ReactFC = () => {
     const textArr = text.split('/')
     textArr.map((txt, id) =>
       html.push(
-        <div>
+        <div key={txt}>
           {`${id + 1} // `} {`* ${txt}`}
         </div>
       )
